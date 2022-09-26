@@ -1,0 +1,15 @@
+version: '3.3'
+
+services:
+  app:
+    image: flaskcompose
+    ports:
+      - "5000:5000"
+    build: ./project
+    restart: always
+    networks:
+      - net
+networks:
+  net:
+volumes:
+  db_data: {}
